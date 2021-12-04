@@ -10,6 +10,8 @@ namespace SgSeason2.Lib
         
         public ChemistryResult TeamChemistry { get { return CalculateTeamChemistry(); } }
 
+        public int TeamBS { get { return Team.Sum(p => p.TotalStats); } }
+
         public List<PlayerData> DetailedChemistryData { get { return CalculateDetailedChemistryData(); } }
         
         public TeamData()

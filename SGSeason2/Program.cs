@@ -6,7 +6,7 @@ var teamData = PreparePlayersData(data);
 var playersChemData = teamData.CalculateDetailedChemistryData();
 var teamChemData = teamData.TeamChemistry;
 
-Console.WriteLine($"Team chem is : { teamChemData.ChemistryValue }, {teamChemData.Chemistry}");
+Console.WriteLine($"Team chem is : { teamChemData.ChemistryValue }, {teamChemData.Chemistry }, { teamData.TeamBS}");
 foreach ( var player in playersChemData )
 {
     Console.WriteLine($"{player.Name}, { player.PlayerChemistryInTeam.ChemistryValue }, { player.PlayerChemistryInTeam.Chemistry }");
