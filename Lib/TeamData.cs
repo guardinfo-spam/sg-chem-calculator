@@ -103,24 +103,23 @@ namespace SgSeason2.Lib
             {
                 links = 5;
             }
-
-            if ( links > 7 )
-            {
-                links = 7;
-            }
+          
 
             //final adjustments
             var chemistryResult = new ChemistryResult();
             if (links < 5)
             {
+                links = 0;
                 chemistryResult.Chemistry = Chemistry.Red;
             }
             else if (links > 6)
             {
+                links = 7;
                 chemistryResult.Chemistry = Chemistry.Green;
             }
             else
             {
+                links = 5;
                 chemistryResult.Chemistry = Chemistry.Yellow;
             }
 
